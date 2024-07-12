@@ -4,8 +4,8 @@
    "private": true,
    "license": "MIT",
    "scripts": {
-      "start": "ts-node src/index.ts",
-      "dev": "env-cmd -f ../../.env ts-node-dev --respawn src/index.ts",
+      "dev": "ts-node src/index.ts",
+      "start": "env-cmd -f ../../.env ts-node-dev --respawn src/index.ts",
       "typeorm": "typeorm-ts-node-commonjs",
       "typeorm:run-migrations": "npm run typeorm migration:run -- -d ./src/data-source.ts",
       "typeorm:generate-migration": "npm run typeorm -- -d ./src/data-source.ts migration:generate ./migrations/$npm_config_name",

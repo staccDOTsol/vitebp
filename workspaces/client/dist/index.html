@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Flappy Bird</title>
+    <title>Memecoin Dashboard</title>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" />
     <style>
@@ -90,91 +90,23 @@
 
         #skin-chooser > * {
             flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        #skin-chooser:first-child {
-            margin-right: auto;
-        }
-
-        #skin-chooser:last-child {
-            margin-left: auto;
-        }
-
-        #skin-chooser-mid {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .skin-chooser-btn-cont {
-            width: 30px;
-            margin: 0 10px;
-        }
-
-        .skin-chooser-btn {
-            width: 30px;
-            height: 30px;
-        }
-
-        #rewards {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #new-achievements {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #spinner-container {
-            display: none;
         }
 
         .flappy-text {
             font-family: Flappy;
-            font-size: 32px;
-            color: black;
-        }
-
-        .game-over {
-            color: #FA9F51;
-            font-size: 60px;
-        }
-
-        .award-text {
-            font-size: 28px;
-            color: white;
         }
 
         .connect-button {
-            width: 326px;
-            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0098EA;
+            height: 60px;
+            font-size: 40px;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
             color: white;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            background-image: url(assets/connect.svg);
-            cursor: pointer;
-        }
-
-        .button-narrow {
-            width: 171px;
-            height: 76px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            background-image: url(assets/button-narrow.svg);
-        }
-
-        .button-wide {
-            width: 267px;
-            background-image: url(assets/button-wide.svg);
         }
 
         .ton-logo {
@@ -226,6 +158,7 @@
         }
     </style>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div id="balance-container" style="display: none;"><span>Balance: </span><span id="balance">0</span></div>
@@ -259,9 +192,13 @@
                 <div class="button-narrow" id="use" style="display: none"><div class="flappy-text" id="use-text">Use</div></div>
                 <div style="margin: 12px 0;" class="button-narrow" id="shop"><div class="flappy-text">Shop</div></div>
                 <div class="button-narrow" id="play"><div style="margin-right: 12px;" class="play-icon"></div><div class="flappy-text" id="play-text">Play</div></div>
+                <div class="button-narrow" id="create-memecoin"><div class="flappy-text">Create Memecoin</div></div> <!-- Add this line -->
+                <div class="button-narrow" id="buy-memecoin"><div class="flappy-text">Buy Memecoin</div></div> <!-- Add this line -->
+                <div class="button-narrow" id="sell-memecoin"><div class="flappy-text">Sell Memecoin</div></div> <!-- Add this line -->
             </div>
         </div>
     </div>
+    <canvas id="myChart" width="400" height="400"></canvas> <!-- Add this line -->
     <script src="bundle.js?1"></script>
 </body>
 </html>

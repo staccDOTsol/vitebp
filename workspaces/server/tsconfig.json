@@ -4,11 +4,13 @@
         "declaration": true,
         "lib": [
             "es5",
-            "es6"
+            "es6",
+            "dom"
         ],
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "jsx": "react"
     },
     "include": [
         "src/**/*"

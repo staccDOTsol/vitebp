@@ -20,6 +20,7 @@
   "dependencies": {
     "@ton/phaser-sdk": "^0.0.1-beta.1",
     "buffer": "^6.0.3",
+    "chart.js": "^4.4.3",
     "phaser": "^3.60.0"
   }
 }
